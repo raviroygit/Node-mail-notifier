@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oleo+Script&display=swap" rel="stylesheet">
+</head>
+
+<body style="width:100%">
+    <div style="width:100%;background:rgb(216, 215, 215);padding: 50px 0;">
+        <div
+            style="margin: 0 auto;width:80%;background:white;border-radius:3px;max-height:500px;height:auto;overflow-x:scroll;overflow-y:scroll;padding:0 10px;">
+            <h1 style="font-family: 'Alex Brush', cursive;">Hello {{name}}!</h1>
+            <hr>
+            <h3>Birthday reminder </h3>
+            <p>Your employee's birthday this week</p>
+            <img src='cid:image' width="100%" height="250px" />
+            <div style="width:100%; height:100%;margin-bottom:20px;">
+                <table style="border: 1px solid #b6b6b6;border-collapse: collapse;border-radius:5px;width:100%;">
+                    <colgroup>
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 20%;">
+                    </colgroup>
+                    <thead>
+                        <tr style="height:40px;background-color: #009879;color:#ffffff;text-align: center;">
+                            <th
+                                style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#ffffff;">
+                                Name</th>
+                            <th
+                                style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#ffffff;">
+                                Employee Id</th>
+                            <th
+                                style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#ffffff;">
+                                Mobile</th>
+                            <th
+                                style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#ffffff;">
+                                Email</th>
+                            <th
+                                style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#ffffff;">
+                                DOB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each birthday}}
+                        <tr style="height:30px;text-align:center;border-bottom: 1px solid #dddddd">
+                            <td style=" border: 1px solid #b6b6b6;border-collapse: collapse;color:#495057;">
+                                {{empName}}
+                            </td>
+                            <td style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#495057;">{{employee_id}}
+                            </td>
+                            <td style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#495057;">
+                                {{mobile_phone}}
+                            </td>
+                            <td style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#495057;">
+                                {{work_email}}
+                            </td>
+                            <td style="border: 1px solid #b6b6b6;border-collapse: collapse;color:#495057;">
+                                {{birthday}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
